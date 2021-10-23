@@ -52,6 +52,11 @@ public class PlayerScript : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (Input.GetKey("escape"))
+        {
+            Application.Quit();
+        }
+
         float hozMovement = Input.GetAxis("Horizontal");
         float verMovement = Input.GetAxis("Vertical");
 
@@ -130,11 +135,6 @@ public class PlayerScript : MonoBehaviour
 
     void Update()
     {
-
-        if (Input.GetKey("escape"))
-        {
-            Application.Quit();
-        }
 
         if (Input.GetKeyDown(KeyCode.D))
         {
