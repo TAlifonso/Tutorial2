@@ -2,6 +2,7 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - CameraScript
+    - EnemyPathing
     - PlayerScript
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
@@ -20,6 +21,14 @@ ScriptsOnlyBuild:
     - UnityEditor.Tilemaps.TilemapPrefabStageHelper
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
+    UnityEditor.Graphs.dll:
+    - UnityEditor.Graphs.AnimationBlendTree.Graph
+    - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
+    - UnityEditor.Graphs.AnimationStateMachine.Graph
+    - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
+    - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
@@ -51,7 +60,17 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 62
       Script: {instanceID: 0}
+    - Class: 74
+      Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
+    - Class: 91
+      Script: {instanceID: 0}
+    - Class: 95
       Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
@@ -62,17 +81,19 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2202}
     - Class: 114
-      Script: {instanceID: 2616}
+      Script: {instanceID: 2424}
     - Class: 114
-      Script: {instanceID: 2776}
+      Script: {instanceID: 2618}
     - Class: 114
-      Script: {instanceID: 2992}
+      Script: {instanceID: 2778}
     - Class: 114
-      Script: {instanceID: 3236}
+      Script: {instanceID: 2994}
     - Class: 114
-      Script: {instanceID: 3588}
+      Script: {instanceID: 3238}
     - Class: 114
-      Script: {instanceID: 5498}
+      Script: {instanceID: 3590}
+    - Class: 114
+      Script: {instanceID: 5500}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -220,6 +241,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.UI.dll
     namespaceName: UnityEngine.UI
     className: RawImage
+  - hash:
+      serializedVersion: 2
+      Hash: 686b1d09ad1e57ba0ecc6522cdd83b56
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: EnemyPathing
   - hash:
       serializedVersion: 2
       Hash: cfdd0010efd7b54c2b7512656dbc9119
@@ -606,7 +633,7 @@ ScriptsOnlyBuild:
     className: ActivationPlayableAsset
   - hash:
       serializedVersion: 2
-      Hash: ba8885765ad8fe055d2176fbae6efcd9
+      Hash: dc8b6255b0d46edf8fa57219f2153c55
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerScript
@@ -631,4 +658,4 @@ ScriptsOnlyBuild:
   platform: 19
   scenePathNames:
   - Assets/Scenes/SampleScene.unity
-  playerPath: C:/Users/Thomy/Desktop/Unity Stuff/Tutorial 2/builds/Tutorial 2.exe
+  playerPath: C:/Users/Thomy/Desktop/Unity Stuff/builds/Tutorial 2.exe
