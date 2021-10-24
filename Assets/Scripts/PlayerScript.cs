@@ -9,12 +9,15 @@ public class PlayerScript : MonoBehaviour
 
     public float speed;
 
+    private float fixedDeltaTime;
+
     public Text score;
     private int scoreValue = 0;
 
     public GameObject win;
     public GameObject Player;
     public GameObject lose;
+    public GameObject scene;
 
     public Text life;
     private int lifeValue = 3;
@@ -47,15 +50,12 @@ public class PlayerScript : MonoBehaviour
 
         musicSource.clip = musicClipOne;
         musicSource.Play();
+
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (Input.GetKey("escape"))
-        {
-            Application.Quit();
-        }
 
         float hozMovement = Input.GetAxis("Horizontal");
         float verMovement = Input.GetAxis("Vertical");
@@ -96,7 +96,7 @@ public class PlayerScript : MonoBehaviour
             Destroy(collision.collider.gameObject);
         }
 
-        if(scoreValue == 11 && collision.collider.tag == "Coin")
+        if(scoreValue == 8 && collision.collider.tag == "Coin")
         {
             win.gameObject.SetActive(true);
             rd2d.constraints = RigidbodyConstraints2D.FreezePositionX | RigidbodyConstraints2D.FreezePositionY;
@@ -106,7 +106,7 @@ public class PlayerScript : MonoBehaviour
             musicSource.Play();
             
         }
-        else if(lifeValue == 0)
+        else if(lifeValue == 0 && scoreValue <= 7)
         {
             lose.gameObject.SetActive(true);
             Destroy(Player);
@@ -151,8 +151,7 @@ public class PlayerScript : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.A))
         {
             anim.SetInteger("State", 0);
-        }
-    
+        }   
 
     }
 
